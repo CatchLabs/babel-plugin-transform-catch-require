@@ -1,0 +1,25 @@
+{
+  "name": "babel-plugin-transform-catch-require",
+  "version": "0.1.0",
+  "description": "Transfrom require inside ng-src",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "author": {
+    "name": "Zeno Zeng"
+  },
+  "license": "MIT",
+  "keywords": [
+    "babel-plugin"
+  ],
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13"
+  },
+  "maintainers": [
+    {
+      "name": "zenozeng",
+      "email": "zenoofzeng@gmail.com"
+    }
+  ]
+}
