@@ -16,7 +16,6 @@ export default function () {
                         throw new Error('babel-plugin-transform-catch-require: path must start with ng-src/');
                     }
                     resolvedPath = resolvedPath.replace('ng-src/', 'cloud/ng/');
-                    console.log({fromPath, toPath, resolvedPath});
                     modulePath.value = resolvedPath;
                 }
             }
