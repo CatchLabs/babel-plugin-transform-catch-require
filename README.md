@@ -2,6 +2,8 @@
 
 This is a babel plugin that:
 
+- Transform require('./') inside ng-src/ to LeanCloud's require('cloud/')
+
 ## Dev
 
 ```

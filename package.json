@@ -4,7 +4,8 @@
   "description": "Transfrom require inside ng-src",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "watch": "babel src -d lib --watch"
   },
   "author": {
     "name": "Zeno Zeng"
