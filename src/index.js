@@ -9,11 +9,11 @@ export default function () {
                 var calleeIsRequire = callee.type == 'Identifier' && callee.name == 'require';
                 var isRelativeModulePath = modulePath && modulePath.type == 'StringLiteral' && modulePath.value.indexOf('.') === 0;
                 if (calleeIsRequire && isRelativeModulePath) {
-                    var fromPath = path.hub.file.log.filename.replace(win32Path.sep, posixPath.sep);
+                    var fromPath = path.hub.file.log.filename.split(win32Path.sep).join(posixPath.sep);
                     var toPath = modulePath.value;
                     var resolvedPath = posixPath.join(fromPath, '..', toPath);
                     if (resolvedPath.indexOf('ng-src/') !== 0) {
-                        throw new Error('babel-plugin-transform-catch-require: path must start with ng-src/');
+                        throw new Error('babel-plugin-transform-catch-require: path must start with ng-src/: ' + resolvedPath);
                     }
                     resolvedPath = resolvedPath.replace('ng-src/', 'cloud/ng/');
                     modulePath.value = resolvedPath;
