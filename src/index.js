@@ -13,7 +13,7 @@ export default function () {
                     var toPath = modulePath.value;
                     var resolvedPath = posixPath.join(fromPath, '..', toPath);
                     if (resolvedPath.indexOf('ng-src/') !== 0) {
-                        throw new Error('babel-plugin-transform-catch-require: path must start with ng-src/: ' + resolvedPath);
+                        return;
                     }
                     resolvedPath = resolvedPath.replace('ng-src/', 'cloud/ng/');
                     modulePath.value = resolvedPath;
